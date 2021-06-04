@@ -5,11 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
 
+    <header>
+        <nav class="header__Nav">
+            <a href="#">TodoList</a>
+            <ul class="nav__List">
+                <li><a href="#">Registrate</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="task__Container">
+            <h2>Introduce un TODO</h2>
+            <div class="task__Inputs">
+                <input type="text" placeholder="Introduce un todo">
+                <button type="button">Crear TODO</button>
+            </div>
+
+            <div class="taskList__Container">
+                <div class="taskItem">
+                    <h3>Todo</h3>
+                    <div class="taskButtons">
+                        <button type="button" class="editTODO">Edit</button>
+                        <button type="button" class="deleteTODO">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="./scripts.js"></script>
 </body>

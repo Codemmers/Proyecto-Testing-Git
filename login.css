@@ -1,105 +1,118 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 600;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
 }
 
 .login__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 0px);
-    background-color: #393e46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 0px);
+  background-color: #393e46;
 }
 
 .login {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    display: flex;
-    padding: 65px 90px;
-    flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    box-shadow: 0px 3px 25px 0px rgb(46, 46, 46);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  display: flex;
+  padding: 65px 90px;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 3px 25px 0px rgb(46, 46, 46);
 }
 
 .login__title {
-    font-size: 25px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 5px;
+  color: cyan;
 }
-
+.login__subtitle {
+  font-size: 12px;
+  color: rgb(189, 188, 188);
+}
 .login__linkRegister {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
 }
 
 .login__linkRegister a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: cyan;
 }
 
 .login__linkRegister a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .login__button {
-    letter-spacing: 1px;
-    font-size: 15px;
-    margin-top: 20px;
-    background: #00adb5;
-    border: none;
-    padding: 15px 25px;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 20px;
+  background: #00adb5;
+  border: none;
+  padding: 15px 25px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .login__button:hover {
-    background: #aad8d3;
-    color: #393e46;
+  background: #aad8d3;
+  color: #393e46;
 }
 
 .login__inputName {
-    margin-top: 20px;
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    outline: none;
-    color: white;
-    font-size: 16px;
+  margin-top: 29px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 0.8);
+}
+.login__inputName:focus {
+  border-bottom: 1px solid cyan;
 }
 
 .login__inputPassword {
-    margin-top: 10px;
-    background: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid white;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    outline: none;
-    color: white;
-    font-size: 16px;
+  margin-top: 10px;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.5, 0.8);
+}
+.login__inputPassword:focus {
+  border-bottom: 1px solid cyan;
 }
 
 ::placeholder {
-    color: white;
-    font-size: 16px;
+  color: white;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 500px) {
-    .login{
-        border: none;
-        background: transparent;
-        box-shadow: none;
-        padding: 20px;
-    }
+  .login {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 20px;
+  }
 }

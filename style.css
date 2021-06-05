@@ -17,6 +17,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
+}
+
+=======
     text-decoration: none;
     list-style: none;
     font-family: 'Work Sans', sans-serif;
@@ -210,3 +214,4 @@ body {
     color: var(--button_delete);
     background: white;
 }
+>>>>>>> 898100124e7f16d202e4a8ebb2532c3a4a601571

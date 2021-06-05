@@ -46,11 +46,11 @@
 
 .register__linkLogin a {
     text-decoration: none;
-    color: cyan;
+    color: white;
 }
 
 .register__linkLogin a:hover {
-    text-decoration: underline;
+    color: cyan;
 }
 
 .register__button {

@@ -43,11 +43,11 @@
 
 .login__linkRegister a {
   text-decoration: none;
-  color: cyan;
+  color: white
 }
 
 .login__linkRegister a:hover {
-  text-decoration: underline;
+  color: cyan;
 }
 
 .login__button {

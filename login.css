@@ -18,6 +18,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: white;
   display: flex;
+  color:white;
   padding: 65px 90px;
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.3);

@@ -20,14 +20,12 @@
 <<<<<<< HEAD
 }
 
-=======
-    text-decoration: none;
+    
+body {
+    background: var(--task_card);
     list-style: none;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-}
-body {
-    background: var(--task_card);
 }
 
 
@@ -48,6 +46,7 @@ body {
     margin-left: .75rem;
     font-size: 200%;
     transition: var(--transition);
+    text-decoration:none;
 }
 
 
@@ -58,6 +57,7 @@ body {
     flex-flow: wrap row;
     justify-content: center;
     align-items: center;
+    list-style: none;
 }
 .nav__List > li > a {
     border-radius: var(--radius);
@@ -66,6 +66,7 @@ body {
     margin: 0 .75rem;
     font-size: 110%;
     transition: var(--transition);
+    text-decoration:none;
 }
 .header__Nav > a:hover, .nav__List > li > a:hover {
     opacity: .85;

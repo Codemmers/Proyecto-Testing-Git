@@ -9,23 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>ToDo</title>
 </head>
 
 <body>
-
-    <header>
-        <nav class="header__Nav">
-            <a href="#">TodoList</a>
-            <ul class="nav__List">
-                <li><a href="./register.html">Registrate</a></li>
-                <li><a href="./login.html">Iniciar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
+        <header class="header">
+            <h1><a href="#">TODO</a></h1>
+            <div class="header__menu">
+                <img src="./img/user-icon.png" alt="Perfil">
+                <p>Perfil</p>
+                <nav>
+                    <ul>
+                        <li><a href="#">Cerrar sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <section class="task__Container">
+
             <h2>Introduce un TODO</h2>
             <div class="task__Inputs">
                 <input type="text" placeholder="Introduce un todo">
@@ -43,7 +45,6 @@
             </div>
         </section>
     </main>
-
     <script src="./scripts.js"></script>
 </body>
 

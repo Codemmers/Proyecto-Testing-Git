@@ -3,7 +3,7 @@
 :root {
     --header_bg: #252629;
     --header_text: #eeeeee;
-    --button_bg: #2b4bb6;
+    --button_bg: #00adb5;
     --task_card: #393e46;
     --main_bg: #eeeeee;
     --radius: .3rem;
@@ -33,80 +33,81 @@ button {
 
 
 
-.header__Nav {
-    position: fixed;
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header {
     width: 100%;
-    padding: 1rem 0;
-    background: var(--header_bg);
-    z-index: 100;
+    height: 80px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-.header__Nav > a {
-    text-align: center;
-    color: var(--header_text);
-    margin-left: .75rem;
-    font-size: 200%;
-    transition: var(--transition);
-    text-decoration:none;
+    justify-content: space-between;
 }
 
-
-
-.nav__List > li {
-    display: inline-block;
+.header h1 a {
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main_bg);
 }
-.nav__List > li > a {
-    border-radius: var(--radius);
+
+.header h1 a:hover {
+    color: var(--button_bg);
+}
+
+.header__menu {
+    margin-right: 30px;
+}
+
+nav ul {
+    display: none;
+    list-style: none;
+    text-decoration: none;
     padding: 0;
-    color: white;
-    margin: 0 .75rem;
-    font-size: 110%;
-    transition: var(--transition);
-    text-decoration:none;
-}
-.header__Nav > a:hover, .nav__List > li > a:hover {
-    opacity: .85;
+    position: absolute;
+    text-align: right;
+    margin: 0px 0px 0px -60px;
 }
 
-
-
-@media screen and (max-width: 414px) {
-    .header__Nav {
-        flex-flow: wrap column;
-    }
-    .header__Nav > a {
-        padding-bottom: 1rem;
-        margin: 0;
-    }
-    .nav__List {
-        padding-top: 1rem;
-    }
+.header__menu li {
+    margin: 10px 0px;
 }
 
-@media screen and (max-width: 280px) {
-    .nav__List {
-        flex-flow: wrap column;
-    }
-    .nav__List > li {
-        margin: .75rem 0;
-    }
+.header__menu li a {
+    color: var(--main_bg);
+    text-decoration: none;
 }
 
+.header__menu {
+    margin-top: 20px;
+    margin-right: 20px;
+}
 
+.header__menu p {
+    color: var(--main_bg);
+}
 
+.header__menu > img, p {
+    cursor: pointer;
+}
 
-
-
-
-
-
-
-
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
 
 .task__Container {
-    padding-top: 100px;
+    padding: 100px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap column;
@@ -114,7 +115,7 @@ button {
     align-items: center;
 }
 .task__Container > h2 {
-    color: white;
+    color: var(--main_bg);
     padding-bottom: 1rem;
 }
 .task__Inputs > input, .task__Inputs > button {
@@ -125,8 +126,14 @@ button {
 }
 .task__Inputs > button {
     font-weight: bold;
-    color: white;
+    color: var(--main_bg);
     background: var(--button_bg);
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+}
+
+.task__Inputs > button:hover {
+    background: #aad8d3;
+    color: var(--task_card);
 }
 
 
@@ -143,7 +150,7 @@ button {
     border-radius: .25rem;
 }
 .taskItem > h3 {
-    color: white;
+    color: var(--main_bg);
     text-align: center;
 }
 .taskButtons > button {
@@ -153,14 +160,20 @@ button {
     padding: 3px 7px;
 }
 .editTODO {
-    color: white;
+    color: var(--main_bg);
     border: thin solid var(--button_edit);
     background: var(--button_edit);
 }
+.editTODO:hover {
+    background:rgb(45, 212, 176)
+}
 .deleteTODO {
-    color: white;
+    color: var(--main_bg);
     border: thin solid var(--button_delete);
     background: var(--button_delete);
+}
+.deleteTODO:hover {
+    background:rgb(245, 10, 80);
 }
 
 @media screen and (max-width: 414px) {

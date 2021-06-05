@@ -3,7 +3,7 @@
 :root {
     --header_bg: #252629;
     --header_text: #eeeeee;
-    --button_bg: #aad8d3;
+    --button_bg: #2b4bb6;
     --task_card: #393e46;
     --main_bg: #eeeeee;
     --radius: .3rem;
@@ -17,7 +17,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-<<<<<<< HEAD
 }
 
     
@@ -28,20 +27,24 @@ body {
     font-weight: 600;
 }
 
+button { 
+    cursor: pointer;
+}
 
 
 
 .header__Nav {
     position: fixed;
     width: 100%;
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
-    align-items: center;
     padding: 1rem 0;
     background: var(--header_bg);
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .header__Nav > a {
+    text-align: center;
     color: var(--header_text);
     margin-left: .75rem;
     font-size: 200%;
@@ -51,17 +54,12 @@ body {
 
 
 
-
-.nav__List {
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+.nav__List > li {
+    display: inline-block;
 }
 .nav__List > li > a {
     border-radius: var(--radius);
-    padding: .5rem;
+    padding: 0;
     color: white;
     margin: 0 .75rem;
     font-size: 110%;
@@ -109,7 +107,6 @@ body {
 
 .task__Container {
     padding-top: 100px;
-    width: 900px;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap column;
@@ -120,99 +117,70 @@ body {
     color: white;
     padding-bottom: 1rem;
 }
-.task__Inputs {
-    background: var(--main_bg);
-    padding: 1rem;
-    width: 450px;
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--radius);
-    box-shadow: var(--boxShadow);
-}
-.task__Inputs > input {
-    padding: 8px 12px;
-    margin: 0 .5rem;
+.task__Inputs > input, .task__Inputs > button {
     border: none;
-    border-bottom: 2px solid #111;
     outline: none;
+    border-radius: .25rem;
+    padding: 7px 12px;
 }
 .task__Inputs > button {
-    padding: 8px 12px;
-    border-radius: var(--radius);
-    color: var(--main_bg);
-    background: var(--header_bg);
-    border: thin solid var(--header_bg);
-    outline: none;
-    cursor: pointer;
-    transition: var(--transition);
+    font-weight: bold;
+    color: white;
+    background: var(--button_bg);
 }
-.task__Inputs > button:hover {
-    color: var(--header_bg);
-    background: white;
-}
-
-
-
-
 
 
 .taskList__Container {
-    width: 400px;
-    padding-top: 2rem;
+    margin: 1rem 0;
 }
 .taskItem {
+    width: 500px;
+    padding: .5rem;
     display: flex;
-    flex-flow: nowrap row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem .5rem;
-    color: white;
     background: var(--header_bg);
-    border-radius: var(--radius);
+    border-radius: .25rem;
 }
 .taskItem > h3 {
-    margin: 0 .5rem;
-}
-.taskButtons {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-flow: wrap row;
-    align-items: center;
-    padding: 1rem .5rem;
     color: white;
-    background: var(--header_bg);
+    text-align: center;
+}
+.taskButtons > button {
+    border: none;
+    outline: none;
+    border-radius: .25rem;
+    padding: 3px 7px;
 }
 .editTODO {
-    right: calc(0% + 80px);
-    position: absolute;
-    padding: 5px 12px;
-    border: none;
-    outline: none;
-    cursor: pointer;
     color: white;
+    border: thin solid var(--button_edit);
     background: var(--button_edit);
-    transition: var(--transition);
 }
 .deleteTODO {
-    right: calc(0% + 10px);
-    position: absolute;
-    padding: 5px 12px;
-    border: none;
-    outline: none;
-    cursor: pointer;
     color: white;
+    border: thin solid var(--button_delete);
     background: var(--button_delete);
-    transition: var(--transition);
 }
-.editTODO:hover {
-    color: var(--button_edit);
-    background: white;
+
+@media screen and (max-width: 414px) {
+    .task__Container {
+        padding-top: 175px;
+    }
+    .task__Inputs {
+        display: flex;
+        flex-flow: wrap column;
+    }
+    .task__Inputs > button {
+        margin-top: 1rem;
+    }
+    .taskItem {
+        width: 300px;
+    }
 }
-.deleteTODO:hover {
-    color: var(--button_delete);
-    background: white;
+
+@media screen and (max-width: 280px) {
+    .taskItem {
+        width: 200px;
+    }
 }
->>>>>>> 898100124e7f16d202e4a8ebb2532c3a4a601571

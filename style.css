@@ -89,6 +89,10 @@ nav ul {
     text-decoration: none;
 }
 
+.header__menu li a:hover {
+    color: #a8a8a8;
+}
+
 .header__menu {
     margin-top: 20px;
     margin-right: 20px;

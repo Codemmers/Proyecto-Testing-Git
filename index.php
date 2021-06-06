@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>ToDo</title>
 </head>
 
@@ -45,7 +45,7 @@
             </div>
         </section>
     </main>
-    <script src="./scripts.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

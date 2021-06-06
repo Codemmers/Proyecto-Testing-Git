@@ -60,6 +60,7 @@ button {
     cursor: pointer;
     text-decoration: none;
     color: var(--main_bg);
+    transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
 }
 
 .header h1 a:hover {

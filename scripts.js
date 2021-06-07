@@ -6,7 +6,7 @@ import {removerTask} from "./removerTask.js";
 
 const header_menu__profile = document.querySelector(".header_menu__profile")
 const nav_login = document.querySelector(".nav_login")
-const deleteTODO = document.querySelector(".deleteTODO")
+const deleteTODO = document.querySelectorAll(".deleteTODO")
 const introduceTODO = document.getElementById('introduceTODO')
 const templateTask = document.getElementById('taskItemTemplate').content
 const taskListContainer = document.querySelector(".taskList__Container")
@@ -43,8 +43,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     // })
 
 
-    deleteTODO.addEventListener("click", (e)=> {
-        let task = e.target.parentElement.parentElement
-        removerTask(task)
+    deleteTODO.forEach(task => {
+        task.addEventListener("click", (e)=>{
+            let taskContainer = e.target.parentElement.parentElement
+            removerTask(taskContainer)
+        })
     })
 })

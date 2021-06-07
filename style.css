@@ -172,6 +172,7 @@ nav ul {
 .editTODO:hover {
     background:rgb(45, 212, 176)
 }
+
 .deleteTODO {
     color: var(--main_bg);
     border: thin solid var(--button_delete);

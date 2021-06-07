@@ -30,8 +30,8 @@
 
             <h2>Introduce un TODO</h2>
             <div class="task__Inputs">
-                <input type="text" placeholder="Introduce un todo">
-                <button type="button">Crear TODO</button>
+                <input id="introduceTODO" type="text" placeholder="Introduce un todo">
+                <button id="addTODO" type="button">Crear TODO</button>
             </div>
 
             <div class="taskList__Container">
@@ -43,8 +43,29 @@
                     </div>
                 </div>
             </div>
+
+            <div class="taskList__Container">
+                <div class="taskItem">
+                    <h3>Todo</h3>
+                    <div class="taskButtons">
+                        <button type="button" class="editTODO">Edit</button>
+                        <button type="button" class="deleteTODO">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     </main>
+    <template id="taskItemTemplate">
+        <div class="taskItem">
+            <h3>Todo</h3>
+            <div class="taskButtons">
+                <button type="button" class="editTODO">Edit</button>
+                <button type="button" class="deleteTODO">Delete</button>
+            </div>
+        </div>  
+    </template>
     <script src="./scripts.js"></script>
 </body>
 

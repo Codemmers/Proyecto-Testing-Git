@@ -153,6 +153,8 @@ nav ul {
     align-items: center;
     background: var(--header_bg);
     border-radius: .25rem;
+    margin-top: 20px;
+    margin-bottom: -10px;
 }
 .taskItem > h3 {
     color: var(--main_bg);

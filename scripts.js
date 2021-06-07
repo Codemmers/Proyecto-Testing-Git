@@ -7,14 +7,16 @@
 const header_menu__profile = document.querySelector(".header_menu__profile")
 const nav_login = document.querySelector(".nav_login")
 const deleteTODO = document.querySelector(".deleteTODO")
+
+
 const introduceTODO = document.getElementById('introduceTODO')
 const templateTask = document.getElementById('taskItemTemplate').content
 const taskListContainer = document.querySelector(".taskList__Container")
+
 const addTODO = document.getElementById('addTODO').addEventListener('click', () => {
     if ((introduceTODO.value).trim().length === 0) {
         return 
     } else {
-        console.log(introduceTODO.value)
         addTODOS(templateTask, taskListContainer, introduceTODO)
     }
 })
@@ -28,7 +30,6 @@ const addTODOS = (template, div, task) => {
     const taskTitle = templateDiv.querySelector('h3')
     taskTitle.textContent = task.value
     div.appendChild(templateDiv)
-    console.log(templateDiv)
 }
 
 

@@ -1,8 +1,9 @@
 <?php
+
 require_once '../connection/conn.php'; 
 
+
     if(isset($_POST)){
-        
         $name = isset($_POST['name']) ? mysqli_real_escape_string($conn, $_POST['name']) : false;
         $email = isset($_POST['email']) ? mysqli_real_escape_string($conn, $_POST['email']) : false;
         $password = isset($_POST['password']) ? mysqli_real_escape_string($conn, $_POST['password']) : false;
@@ -36,16 +37,27 @@ require_once '../connection/conn.php';
 
     $guardar=false;
     if(count($errores) == 0){
-        $guardar =true;
+        
         $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost'=>7]);
-        $sql = "INSERT INTO users VALUES(null, '$name', '$email', '$password_segura');";
-        // var_dump($sql);
-        $insertar = mysqli_query($conn, $sql);
+        $sql = "INSERT INTO users VALUES(null, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('sss',$name,$email,$password_segura);
+        $stmt->execute();
 
+        if($stmt->affected_rows){
+            $guardar = true;
+            $id = $stmt->insert_id;
+        }else{
+            $guardar = false;
+        }
+        $stmt->close();
     }
 
     if ($guardar) {
-        echo "datos enviados";
+        //Envia al usuario registrado al index
+            header("location: ../index.php");
+    }else{
+        echo "ha ocurrido un error en la consulta";
     }
 
 

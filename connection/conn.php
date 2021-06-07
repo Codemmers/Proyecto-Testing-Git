@@ -1,8 +1,12 @@
 <?php
+        //Bloque de try catch añadidido
+        try {
+            $conn = new mysqli("localhost","root","root","proyecto-testing-git_bd");
+        } catch (\Exception $e) {
+            echo "error " . $e->getMessage();
+        }
 
-$conn=new mysqli("localhost","root","","proyecto-testing-git_bd")or die("Conexión Fallida ".$conn->connect_error);
 
-// if(!isset($_SESSION)){
-// 	session_start();
-// }
+
+
 ?>

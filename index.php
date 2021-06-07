@@ -18,7 +18,7 @@
             <h1><a href="#">TODO</a></h1>
             <div class="header__menu">
                 <img src="./img/user-icon.png" alt="Perfil">
-                <p>Perfil</p>
+                <p><?php echo $_SESSION["name"];?></p>
                 <nav>
                     <ul>
                         <li><a href="#">Cerrar sesión</a></li>

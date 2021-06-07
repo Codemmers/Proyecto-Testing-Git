@@ -151,20 +151,28 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--header_bg);
     border-radius: .25rem;
     margin-top: 20px;
     margin-bottom: -10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(255,255,255, 0.1);
+    box-shadow: 0px 3px 25px 0px rgb(46, 46, 46);
 }
 .taskItem > h3 {
     color: var(--main_bg);
-    text-align: center;
+    text-align: left;
+    font-size: 18px;
+    margin: 10px;
 }
 .taskButtons > button {
+    display: flex;
     border: none;
     outline: none;
     border-radius: .25rem;
-    padding: 3px 7px;
+    padding: 5px 10px;
+    margin: 4px;
+    width: 60px;
 }
 .editTODO {
     color: var(--main_bg);
@@ -185,6 +193,10 @@ nav ul {
 }
 
 @media screen and (max-width: 414px) {
+    .taskItem > h3 {
+        font-size: 15px;
+    }
+
     .task__Container {
         padding-top: 175px;
     }

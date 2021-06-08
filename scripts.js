@@ -13,6 +13,12 @@ const introduceTODO = document.getElementById('introduceTODO')
 const templateTask = document.getElementById('taskItemTemplate').content
 const taskListContainer = document.querySelector(".taskList__Container")
 
+
+class Todo {
+    constructor(){
+        
+    }
+}
 // * FUNCIÓN PARA RECIBIR EL INPUT DEL TODO 
 
 const crearTODO = () => {

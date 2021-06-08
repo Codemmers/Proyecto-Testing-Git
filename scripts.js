@@ -1,67 +1,95 @@
 
 
-const header_menu__profile = document.querySelector(".header_menu__profile")
-const nav_login = document.querySelector(".nav_login")
-const deleteTODO = document.querySelectorAll(".deleteTODO")
-const deleteTODO = document.querySelector(".deleteTODO")
+class Task {
+    constructor(input) {
+        this.input = input
+    }
 
+    addTodo() {
+        console.log(`${this.input} añadido`)
+    }
 
-const introduceTODO = document.getElementById('introduceTODO')
-const templateTask = document.getElementById('taskItemTemplate').content
-const taskListContainer = document.querySelector(".taskList__Container")
+    editarTodo() {
+        console.log(`${this.input} añadido`)
+    }
 
-// * FUNCIÓN PARA RECIBIR EL INPUT DEL TODO 
-
-const crearTODO = () => {
-    if ((introduceTODO.value).trim().length === 0) {
-        return 
-    } else {
-        addTODOS(templateTask, taskListContainer, introduceTODO)
-        resetInputValue(introduceTODO)
+    eliminarTodo() {
+        console.log(`${this.input} eliminado`)
     }
 }
 
-const addTODO = document.getElementById('addTODO').addEventListener('click', crearTODO)
-
-// * FUNCIÓN AÑADIR TODO
-
-const addTODOS = (template, div, task) => {
-    const templateClone = document.importNode(template,true)
-    const templateDiv = templateClone.querySelector('div')
-    const taskTitle = templateDiv.querySelector('h3')
-    taskTitle.textContent = task.value
-    div.appendChild(templateDiv)
-}
-
-// * BORRAR VALORES DEL INPUT DESPUÉS DE CREAR TODO
-
-const resetInputValue = (task) => {
-    task.value = '';
-}
-
-// * PULSAR ENTER PARA CREAR TODO
-
-document.addEventListener('keyup', (event) => {
-    if (event.keyCode == 13){
-        crearTODO()
-    } else {
-        return
-    }
-})
-
-document.addEventListener("DOMContentLoaded", ()=>{
+const tarea = new Task("testing")
+tarea.addTodo()
 
 
-    // //* AÑADE EFECTO DE ANIMACIÓN AL MOSTRAR EL LOGIN
-    // header_menu__profile.addEventListener("click", ()=>{
-    //     nav_login.classList.toggle("showLogin")
-    // })
 
 
-    deleteTODO.forEach(task => {
-        task.addEventListener("click", (e)=>{
-            let taskContainer = e.target.parentElement.parentElement
-            removerTask(taskContainer)
-        })
-    })
-})
+
+
+
+
+
+// const header_menu__profile = document.querySelector(".header_menu__profile")
+// const nav_login = document.querySelector(".nav_login")
+// const deleteTODO = document.querySelectorAll(".deleteTODO")
+
+
+// const introduceTODO = document.getElementById('introduceTODO')
+// const templateTask = document.getElementById('taskItemTemplate').content
+// const taskListContainer = document.querySelector(".taskList__Container")
+
+// // * FUNCIÓN PARA RECIBIR EL INPUT DEL TODO 
+
+// const crearTODO = () => {
+//     if ((introduceTODO.value).trim().length === 0) {
+//         return 
+//     } else {
+//         addTODOS(templateTask, taskListContainer, introduceTODO)
+//         resetInputValue(introduceTODO)
+//     }
+// }
+
+// const addTODO = document.getElementById('addTODO').addEventListener('click', crearTODO)
+
+// // * FUNCIÓN AÑADIR TODO
+
+// const addTODOS = (template, div, task) => {
+//     const templateClone = document.importNode(template,true)
+//     const templateDiv = templateClone.querySelector('div')
+//     const taskTitle = templateDiv.querySelector('h3')
+//     taskTitle.textContent = task.value
+//     div.appendChild(templateDiv)
+// }
+
+// // * BORRAR VALORES DEL INPUT DESPUÉS DE CREAR TODO
+
+// const resetInputValue = (task) => {
+//     task.value = '';
+// }
+
+// // * PULSAR ENTER PARA CREAR TODO
+
+// document.addEventListener('keyup', (event) => {
+//     if (event.keyCode == 13){
+//         crearTODO()
+//     } else {
+//         return
+//     }
+// })
+
+// document.addEventListener("DOMContentLoaded", ()=>{
+
+
+//     // //* AÑADE EFECTO DE ANIMACIÓN AL MOSTRAR EL LOGIN
+//     // header_menu__profile.addEventListener("click", ()=>{
+//     //     nav_login.classList.toggle("showLogin")
+//     // })
+
+
+//     deleteTODO.forEach(task => {
+//         task.addEventListener("click", (e)=>{
+//             let taskContainer = e.target.parentElement.parentElement
+//             removerTask(taskContainer)
+//         })
+//     })
+// })

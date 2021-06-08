@@ -193,6 +193,10 @@ nav ul {
     background:rgb(245, 10, 80);
 }
 
+.hide {
+    display: none;
+}
+
 @media screen and (max-width: 414px) {
     .taskItem > h3 {
         font-size: 15px;

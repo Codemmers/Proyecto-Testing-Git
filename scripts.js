@@ -1,3 +1,12 @@
+const templateTask = document.getElementById('taskItemTemplate').content
+const introduceTODO = document.getElementById('introduceTODO')
+const addTODO = document.getElementById('addTODO')
+const taskListContainer = document.querySelector('.taskList__Container')
+const deleteTODO = document.querySelector('.deleteTODO')
+
+
+
+// * FUNCIÓN AÑADIR TODO
 
 
 class Task {
@@ -6,20 +15,51 @@ class Task {
     }
 
     addTodo() {
-        console.log(`${this.input} añadido`)
-    }
+        const crearTODO = () => {
+            if ((introduceTODO.value).trim().length === 0) {
+                return 
+            } else {
+                addTODOS(templateTask, taskListContainer, introduceTODO)
+                resetInputValue(introduceTODO)
+            }
+        }
+        const addTODOS = (template, div, task) => {
+            const templateClone = document.importNode(template,true)
+            const templateDiv = templateClone.querySelector('div')
+            const taskTitle = templateDiv.querySelector('h3')
+            taskTitle.textContent = task.value
+            div.appendChild(templateDiv)
+        }
+        addTODO.addEventListener('click', crearTODO)
+        const resetInputValue = (task) => {
+            task.value = ''
+        }
+        document.addEventListener('keyup', (event) => {
+            if (event.keyCode == 13){
+                crearTODO()
+            } else {
+                return
+            }
+        })
+    }   
 
     editarTodo() {
         console.log(`${this.input} añadido`)
     }
 
     eliminarTodo() {
-        console.log(`${this.input} eliminado`)
+        const borrarTODO = () => {
+            deleteTODO.addEventListener('click', () => {
+                console.log('Delete element')
+            })
+        }
+        borrarTODO()
     }
 }
 
-const tarea = new Task("testing")
+const tarea = new Task()
 tarea.addTodo()
+tarea.eliminarTodo()
 
 
 
@@ -40,26 +80,9 @@ tarea.addTodo()
 
 // // * FUNCIÓN PARA RECIBIR EL INPUT DEL TODO 
 
-// const crearTODO = () => {
-//     if ((introduceTODO.value).trim().length === 0) {
-//         return 
-//     } else {
-//         addTODOS(templateTask, taskListContainer, introduceTODO)
-//         resetInputValue(introduceTODO)
-//     }
-// }
 
-// const addTODO = document.getElementById('addTODO').addEventListener('click', crearTODO)
 
-// // * FUNCIÓN AÑADIR TODO
 
-// const addTODOS = (template, div, task) => {
-//     const templateClone = document.importNode(template,true)
-//     const templateDiv = templateClone.querySelector('div')
-//     const taskTitle = templateDiv.querySelector('h3')
-//     taskTitle.textContent = task.value
-//     div.appendChild(templateDiv)
-// }
 
 // // * BORRAR VALORES DEL INPUT DESPUÉS DE CREAR TODO
 

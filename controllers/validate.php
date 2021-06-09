@@ -31,6 +31,7 @@
         $password_validado = false;
         $errores['password'] = "La contraseña está vacía";
     }
+    
     if(count($errores) == 0){
         //Guarda en la base de datos
         $password_segura = password_hash($password, PASSWORD_BCRYPT, ['cost'=>7]);
@@ -52,6 +53,7 @@
         $consulta = "SELECT * FROM users WHERE id = $id";
         $resultado = $conn->query($consulta);
         $registro = $resultado->fetch_assoc();
+        $conn->close();
         if($registro["id"]){
             session_start();
             $_SESSION["name"] = $registro["user_name"];

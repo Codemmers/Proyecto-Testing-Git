@@ -13,9 +13,9 @@
 
 <body>
     <main class="login__container">
-        <form class="login">
+        <form class="login" action="controllers/log_user.php" method="post">
             <h2 class="login__title">Iniciar sesión</h2>
-            <input class="login__inputName" type="text" placeholder="Nombre">
+            <input class="login__inputName" type="email" placeholder="Email">
             <input class="login__inputPassword" type="password" placeholder="Contraseña">
             <p class="login__linkRegister">¿No tienes cuenta todavía? <a href="./register.php">Crea una.</a></p>
             <button class="login__button">Iniciar sesión</button>

@@ -1,6 +1,11 @@
+<?php session_start();
+if(!isset($_SESSION["id"])){
+    header("location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,13 +26,12 @@
                 <p><?php echo $_SESSION["name"];?></p>
                 <nav>
                     <ul>
-                        <li><a href="#">Cerrar sesión</a></li>
+                        <li><a href="signout.php">Cerrar sesión</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
         <section class="task__Container">
-
             <h2>Introduce un TODO</h2>
             <div class="task__Inputs">
                 <input type="text" placeholder="Introduce un todo">

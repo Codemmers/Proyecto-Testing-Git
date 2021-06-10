@@ -1,8 +1,10 @@
-const templateTask = document.getElementById('taskItemTemplate').content
+let templateTask = document.getElementById('taskItemTemplate').content
 const introduceTODO = document.getElementById('introduceTODO')
 const addTODO = document.getElementById('addTODO')
-const taskListContainer = document.querySelector('.taskList__Container')
+let taskListContainer = document.querySelector('.taskList__Container')
 const deleteTODO = document.querySelector('.deleteTODO')
+const editTODO = document.querySelector('.editTODO')
+const parentTaskItem = document.getElementById('taskItemTemplateContainer')
 
 
 
@@ -31,9 +33,11 @@ class Task {
             div.appendChild(templateDiv)
         }
         addTODO.addEventListener('click', crearTODO)
+
         const resetInputValue = (task) => {
             task.value = ''
         }
+
         document.addEventListener('keyup', (event) => {
             if (event.keyCode == 13){
                 crearTODO()
@@ -44,21 +48,20 @@ class Task {
     }   
 
     editarTodo() {
-        console.log(`${this.input} añadido`)
+
     }
 
     eliminarTodo() {
-        const borrarTODO = () => {
-            deleteTODO.addEventListener('click', () => {
-                console.log('Delete element')
-            })
+        const deleteTODOS = (taskContainer,div) => {
+            taskContainer.parentNode.removeChild(div)
         }
-        borrarTODO()
+        deleteTODO.addEventListener('click', () => deleteTODOS(templateTask, parentTaskItem))
     }
 }
 
 const tarea = new Task()
 tarea.addTodo()
+tarea.editarTodo()
 tarea.eliminarTodo()
 
 

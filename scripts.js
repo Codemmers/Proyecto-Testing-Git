@@ -1,3 +1,5 @@
+import {adderTODO} from './adderTask.js'
+
 let templateTask = document.getElementById('taskItemTemplate').content
 const introduceTODO = document.getElementById('introduceTODO')
 const addTODO = document.getElementById('addTODO')
@@ -17,7 +19,7 @@ class Task {
     }
 
     addTodo() {
-        addTODO.addEventListener('click', crearTODO)
+        addTODO.addEventListener('click', adderTODO)
     }   
 
     editarTodo() {

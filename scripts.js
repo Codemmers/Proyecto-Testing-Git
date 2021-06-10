@@ -17,34 +17,7 @@ class Task {
     }
 
     addTodo() {
-        const crearTODO = () => {
-            if ((introduceTODO.value).trim().length === 0) {
-                return 
-            } else {
-                addTODOS(templateTask, taskListContainer, introduceTODO)
-                resetInputValue(introduceTODO)
-            }
-        }
-        const addTODOS = (template, div, task) => {
-            const templateClone = document.importNode(template,true)
-            const templateDiv = templateClone.querySelector('div')
-            const taskTitle = templateDiv.querySelector('h3')
-            taskTitle.textContent = task.value
-            div.appendChild(templateDiv)
-        }
         addTODO.addEventListener('click', crearTODO)
-
-        const resetInputValue = (task) => {
-            task.value = ''
-        }
-
-        document.addEventListener('keyup', (event) => {
-            if (event.keyCode == 13){
-                crearTODO()
-            } else {
-                return
-            }
-        })
     }   
 
     editarTodo() {
@@ -53,9 +26,9 @@ class Task {
 
     eliminarTodo() {
         const deleteTODOS = (taskContainer,div) => {
-            taskContainer.parentNode.removeChild(div)
+           taskContainer ? taskContainer.parentNode.removeChild(div) : console.log('Nothing') 
         }
-        deleteTODO.addEventListener('click', () => deleteTODOS(templateTask, parentTaskItem))
+        deleteTODO.addEventListener('click', () => deleteTODOS(templateTask,taskListContainer))
     }
 }
 

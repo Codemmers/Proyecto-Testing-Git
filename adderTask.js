@@ -4,17 +4,22 @@ const addTODO = document.getElementById('addTODO')
 let taskListContainer = document.querySelector('.taskList__Container')
 
 const crearTODO = () => {
+
+        const deleteTODOS = (deleteButtons) => {
+            const deleteContainer =  deleteButtons.parentElement.parentElement
+            console.log(deleteContainer)
+            deleteContainer.remove()
+        }
+
         const addTODOS = (template, div, task) => {
             const templateClone = document.importNode(template,true)
             const templateDiv = templateClone.querySelector('div')
             const taskTitle = templateDiv.querySelector('h3')
-            const deleteButtons = templateDiv.querySelector('div').querySelector('deleteTODO')
-            console.log(deleteButtons)
+            const deleteButtons = templateDiv.querySelector('div').querySelector('.deleteTODO')
             taskTitle.textContent = task.value
             div.appendChild(templateDiv)
+            deleteButtons.addEventListener("click", () => deleteTODOS(deleteButtons))
         }
-
-
 
         const resetInputValue = (task) => {
             task.value = ''

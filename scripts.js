@@ -8,14 +8,9 @@ import {taskListContainer} from './adderTask.js'
 
 const deleteTODO = document.querySelectorAll('.deleteTODO')
 const editTODO = document.querySelectorAll('.editTODO')
-const parentTaskItem = document.getElementById('taskItemTemplateContainer')
 
 
-deleteTODO.forEach(btn => {
-    btn.addEventListener("click", e => {
-        console.log(e.target)
-    })
-})
+
 
 
 class Task {
@@ -39,10 +34,11 @@ class Task {
     }
 
     eliminarTodo() {
-        // const deleteTODOS = (taskContainer,div) => {
-        //    taskContainer ? taskContainer.parentNode.removeChild(div) : console.log('Nothing') 
-        // }
-        // deleteTODO.addEventListener('click', () => deleteTODOS(templateTask,taskListContainer))
+        // deleteTODO.forEach( btn => {
+        //     btn.addEventListener("click", e => {
+        //         console.log(e.target)
+        //     })
+        // })
     }
 }
 

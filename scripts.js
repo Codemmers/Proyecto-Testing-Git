@@ -1,16 +1,15 @@
-import {adderTODO} from './adderTask.js'
+import {crearTODO} from './adderTask.js'
+import {templateTask} from './adderTask.js'
+import {introduceTODO} from './adderTask.js'
+import {addTODO} from './adderTask.js'
+import {taskListContainer} from './adderTask.js'
 
-let templateTask = document.getElementById('taskItemTemplate').content
-const introduceTODO = document.getElementById('introduceTODO')
-const addTODO = document.getElementById('addTODO')
-let taskListContainer = document.querySelector('.taskList__Container')
+
+
 const deleteTODO = document.querySelector('.deleteTODO')
 const editTODO = document.querySelector('.editTODO')
 const parentTaskItem = document.getElementById('taskItemTemplateContainer')
 
-
-
-// * FUNCIÓN AÑADIR TODO
 
 
 class Task {
@@ -19,7 +18,14 @@ class Task {
     }
 
     addTodo() {
-        addTODO.addEventListener('click', adderTODO)
+        addTODO.addEventListener('click', crearTODO)
+        document.addEventListener('keyup', (event) => {
+            if (event.keyCode === 13) {
+                crearTODO()
+            } else {
+                return
+            }
+        })
     }   
 
     editarTodo() {

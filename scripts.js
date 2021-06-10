@@ -33,10 +33,10 @@ class Task {
     }
 
     eliminarTodo() {
-        const deleteTODOS = (taskContainer,div) => {
-           taskContainer ? taskContainer.parentNode.removeChild(div) : console.log('Nothing') 
-        }
-        deleteTODO.addEventListener('click', () => deleteTODOS(templateTask,taskListContainer))
+        // const deleteTODOS = (taskContainer,div) => {
+        //    taskContainer ? taskContainer.parentNode.removeChild(div) : console.log('Nothing') 
+        // }
+        // deleteTODO.addEventListener('click', () => deleteTODOS(templateTask,taskListContainer))
     }
 }
 

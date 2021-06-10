@@ -8,9 +8,13 @@ const crearTODO = () => {
             const templateClone = document.importNode(template,true)
             const templateDiv = templateClone.querySelector('div')
             const taskTitle = templateDiv.querySelector('h3')
+            const deleteButtons = templateDiv.querySelector('div').querySelector('deleteTODO')
+            console.log(deleteButtons)
             taskTitle.textContent = task.value
             div.appendChild(templateDiv)
         }
+
+
 
         const resetInputValue = (task) => {
             task.value = ''

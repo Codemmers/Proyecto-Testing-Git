@@ -7,8 +7,9 @@ const crearTODO = () => {
 
         const deleteTODOS = (deleteButtons) => {
             const deleteContainer =  deleteButtons.parentElement.parentElement
+            deleteContainer.classList.add("deleteTODOAnimation")
+            deleteContainer.addEventListener("animationend", () => deleteContainer.remove())
             // console.log(deleteContainer)
-            deleteContainer.remove()
         }
 
         const addTODOS = (template, div, task) => {

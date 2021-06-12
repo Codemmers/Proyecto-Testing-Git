@@ -30,7 +30,6 @@ class Task {
     }   
 
     editarTodo() {
-
     }
 
     eliminarTodo() {

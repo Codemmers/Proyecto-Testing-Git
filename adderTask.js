@@ -11,11 +11,6 @@ const crearTODO = () => {
             deleteContainer.remove()
         }
 
-        const editValue = (task) => {
-            task.contentEditable = 'true'
-        }
-
-
         const addTODOS = (template, div, task) => {
             const templateClone = document.importNode(template,true)
             const templateDiv = templateClone.querySelector('div')
@@ -23,9 +18,13 @@ const crearTODO = () => {
             taskTitle.textContent = task.value
             div.appendChild(templateDiv)
             const deleteButtons = templateDiv.querySelector('div').querySelector('.deleteTODO')
-            deleteButtons.addEventListener("click", () => deleteTODOS(deleteButtons))
+            deleteButtons.addEventListener('click', () => deleteTODOS(deleteButtons))
             const editButtons = templateDiv.querySelector('div').querySelector('.editTODO')
-            editButtons.addEventListener('click', () =>  editValue(templateDiv))
+            editButtons.addEventListener('click', () => {
+                console.log(taskTitle)
+                taskTitle.contentEditable = 'true'
+                taskTitle.focus()
+            })
         }
 
         const resetInputValue = (task) => {

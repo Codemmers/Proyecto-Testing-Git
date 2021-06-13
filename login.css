@@ -7,11 +7,13 @@
 }
 
 .login__container {
+  background: #606c88;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3f4c6b, #606c88);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3f4c6b, #606c88);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 0px);
-  background-color: #393e46;
 }
 
 .login {

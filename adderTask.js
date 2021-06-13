@@ -15,6 +15,7 @@ const crearTODO = () => {
             taskTitle.textContent = task.value
             div.appendChild(templateDiv)
 
+
             const deleteButtons = templateDiv.querySelector('div').querySelector('.deleteTODO')
             deleteButtons.addEventListener('click', () => deleteTODOS(deleteButtons))
 
